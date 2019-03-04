@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TCall</string>
+    <string name="error_websocket_config">创建 WebSocket 参数错误</string>
+    <string name="error_no_net">网络断开</string>
+</resources>
