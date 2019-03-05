@@ -139,6 +139,7 @@ public class WsManager implements IWsManager {
         };
     }
 
+    // TODO
     private synchronized void reconnect() {
         stopConnect();
         switch (getCurrentStatus()) {
@@ -177,13 +178,13 @@ public class WsManager implements IWsManager {
     }
 
     @Override
-    public synchronized void startConnect() {
+    public void startConnect() {
         Log.i(TAG, "client newWebSocket");
         mOkHttpClient.newWebSocket(mRequest, mWebSocketListener);
     }
 
     @Override
-    public synchronized void stopConnect() {
+    public void stopConnect() {
         // 在关闭之前，所有已经在队列中的消息将被传送完毕
         mWebSocket.close(1000, "client close");
         // 在关闭之前，所有已经在队列中的消息将被丢弃

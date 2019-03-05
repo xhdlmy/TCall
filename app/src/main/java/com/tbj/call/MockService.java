@@ -84,9 +84,7 @@ public class MockService extends Service {
                 public void onClosing(WebSocket webSocket, int code, String reason) {
                     Log.i(TAG, "server onClosing code:" + code + " reason:" + reason);
                     mHandler.removeCallbacks(mRunnable);
-
-                    mReSendCount += 10;
-                    sendMsg(mReSendCount);
+                    // TODO 客户端请求关闭，就不能再用了，需要新的连接
                 }
 
                 @Override
