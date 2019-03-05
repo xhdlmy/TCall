@@ -11,10 +11,10 @@ package com.tbj.call.ws;
  */
 class WsStatus {
 
-  final static int DISCONNECTED = -1;
-  final static int CONNECTING = 0;
+  final static int DISCONNECTED = 0;
   final static int CONNECTED = 1;
-  final static int RECONNECT = 2;
+  final static int CLOSING = 2;
+  final static int CLOSE = 3;
 
 }
 
